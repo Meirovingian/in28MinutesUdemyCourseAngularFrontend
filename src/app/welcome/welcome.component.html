@@ -1,0 +1,17 @@
+<h1>Welcome {{ name }} to our awesome application !</h1>
+<div class="container">
+  You successfully logged
+</div>
+<div class="container">
+  You can manage your todo list here <a routerLink="/todos">LINK</a>
+</div>
+<div class="container">
+  Click here to get a customized welcoming message
+  <button class="btn btn-success" (click)="getWelcomeMessageWithParameter()">
+    Get welcome message
+  </button>
+</div>
+<div class="container" *ngIf="customizedMessage">
+  <h2>Your customized welcome message :</h2>
+  {{ customizedMessage }}
+</div>
